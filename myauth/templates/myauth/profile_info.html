@@ -1,0 +1,36 @@
+{% extends 'myauth/base.html' %}
+{% load cache %}
+
+{% block title %}Profile info{% endblock %}
+
+{% block body %}
+  <h1>Profile info</h1>
+  {% if user.is_authenticated %}
+    {% cache 50 profileinfo profile.pk %}
+      <h2>Details</h2>
+      {% if profile.avatar %}
+        <p>Avatar: <img src="{{ profile.avatar.url }}" height=100 width=100 alt='profile.avatar.name'></p>
+      {% else %}
+        <h2>No avatar</h2>
+      {% endif %}
+        <p>Username: {{ profile.user.username }}</p>
+        <p>First name: {{ profile.user.first_name }}</p>
+        <p>Last name: {{ profile.user.last_name }}</p>
+        <p>Email: {{ profile.user.email }}</p>
+        <p>Bio: {{ profile.bio }}</p>
+    {% endcache %}
+  {% else %}
+    <h2>Profile is anonymous</h2>
+  {% endif %}
+    {% if user.is_staff or user.pk == profile.user.pk %}
+      <div>
+        <a href="{% url 'myauth:change' pk=profile.pk %}">Change Profile</a>
+      </div>
+    {% endif %}
+  <div>
+    <a href="{% url 'myauth:profiles' %}">Go to profiles</a>
+  </div>
+  <p>
+    {% now "H:i:s" %}
+  </p>
+{% endblock body %}

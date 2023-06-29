@@ -1,0 +1,145 @@
+[
+    {
+        "model": "shopapp.product",
+        "pk": 1,
+        "fields": {
+            "name": "Smartphone",
+            "description": "",
+            "price": "1999.00",
+            "discount": 0,
+            "created_at": "2023-01-31T07:22:03.162Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 2,
+        "fields": {
+            "name": "Laptop",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, perferendis iste nobis, laudantium velit debitis ipsum sapiente placeat maxime deleniti provident hic dolores possimus sed inventore quae ipsam cum iusto.Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, perferendis iste nobis, laudantium velit debitis ipsum sapiente placeat maxime deleniti provident hic dolores possimus sed inventore quae ipsam cum iusto.",
+            "price": "2599.00",
+            "discount": 10,
+            "created_at": "2023-01-31T07:22:03.162Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 3,
+        "fields": {
+            "name": "Desktop new",
+            "description": "Lorem ipsum dolor sit amet",
+            "price": "987.00",
+            "discount": 25,
+            "created_at": "2023-01-31T07:22:03.162Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 4,
+        "fields": {
+            "name": "Notebook",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab ratione ducimus iste repellendus eligendi, minima, doloribus illum quas, architecto magnam similique voluptates necessitatibus eius consequuntur ea velit repudiandae. Dignissimos, nihil?",
+            "price": "15999.00",
+            "discount": 0,
+            "created_at": "2023-02-06T12:06:24.276Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 5,
+        "fields": {
+            "name": "Iphone",
+            "description": "phone I",
+            "price": "9999.99",
+            "discount": 12,
+            "created_at": "2023-02-07T08:11:54.603Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 6,
+        "fields": {
+            "name": "Tablet",
+            "description": "cool tablet",
+            "price": "99999.59",
+            "discount": 15,
+            "created_at": "2023-02-07T08:15:37.216Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 8,
+        "fields": {
+            "name": "Iphone 15 pro max",
+            "description": "new iphone",
+            "price": "150000.00",
+            "discount": 20,
+            "created_at": "2023-02-13T11:17:20.026Z",
+            "archived": false,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 9,
+        "fields": {
+            "name": "Tablet",
+            "description": "fdwbeb",
+            "price": "213431.00",
+            "discount": 123,
+            "created_at": "2023-02-13T12:40:44.674Z",
+            "archived": true,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 10,
+        "fields": {
+            "name": "thetrhter",
+            "description": "rgerth",
+            "price": "53425.00",
+            "discount": 0,
+            "created_at": "2023-02-13T13:10:45.438Z",
+            "archived": true,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 11,
+        "fields": {
+            "name": "geg",
+            "description": "ewrgqe",
+            "price": "3241.00",
+            "discount": 32141,
+            "created_at": "2023-02-13T13:17:36.866Z",
+            "archived": true,
+            "created_by": 1
+        }
+    },
+    {
+        "model": "shopapp.product",
+        "pk": 12,
+        "fields": {
+            "name": "Tablet neeeeeeew",
+            "description": "qwertyui",
+            "price": "9999.00",
+            "discount": 32,
+            "created_at": "2023-03-06T12:16:38.846Z",
+            "archived": false,
+            "created_by": 5
+        }
+    }
+]

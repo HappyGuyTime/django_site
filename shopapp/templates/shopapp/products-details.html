@@ -1,0 +1,54 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% translate "Product" %} #{{ product.pk }}
+{% endblock %}
+
+{% block body %}
+    <h1>{% translate "Product" context "product name" %}: {{ product.name }}</h1>
+    <div>
+        {% if product.preview %}
+            <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}" width='500' height='500'>
+        {% endif %}
+        <p>{% translate "Description" %}: {{ product.description }}</p>
+        <p>{% translate "Price" %}: {{ product.price }}</p>
+        <p>{% translate "Discount" %}: {{ product.discount }}</p>
+        <p>{% translate "Archived" %}: {{ product.archived }}</p>
+        <p>{% translate "Created_by" %}: {% firstof product.created_by.first_name product.created_by.username %}</p>
+        <p>
+            {% translate "Images" %}:
+            {% if product.images.all %}
+                <p>
+                    {% blocktranslate count images_count=product.images.all|length %}
+                        There is only one image.
+                        {% plural %}
+                            There are {{ images_count }} images.
+                    {% endblocktranslate %}
+                </p>
+                {% for img in product.images.all %}
+                <img src="{{ img.image.url }}" alt="{{ img.image.name }}" width='300' height='300'>
+                <span>{{ img.description }}</span>
+                {% endfor %}
+            {% else %}
+                <p>
+                    {% blocktranslate %}
+                        No Images Uploaded yet
+                    {% endblocktranslate %}
+                </p>
+            {% endif %}
+        </p>
+    </div>
+    {% if perms.shopapp.add_product %}
+        <div>
+            <a href="{% url 'shopapp:product_update' pk=product.pk %}">{% translate "Update product" %}</a>
+        </div>
+        <div>
+            <a href="{% url 'shopapp:product_delete' pk=product.pk %}">{% translate "Archive product" %}</a>
+        </div>
+    {% endif %}
+    <div>
+        <a href="{% url 'shopapp:products_list' %}">{% translate "Go to products list" %}</a>
+    </div>
+{% endblock body %}

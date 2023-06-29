@@ -1,0 +1,51 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% translate "Products List" %}
+{% endblock title %}
+
+{% block body %}
+    <h1>{% translate "Products" %}:</h1>
+    {% if products %}
+        <p>
+            {% blocktranslate count products_count=products|length %}
+                There is only one product.
+                {% plural %}
+                    There are {{ products_count }} products.
+            {% endblocktranslate %}
+        </p>
+        <ul>
+            {% for product in products %}
+            <li>
+                <p>
+                    <a href="{% url 'shopapp:product_details' pk=product.pk %}">{% translate "Name" context "product name" %}: {{ product.name }}</a>
+                </p>
+                {% if product.preview %}
+                    <img src="{{ product.preview.url }}" alt="{{ product.preview.name }}" width='320' height='320'>
+                {% endif %}
+                <p>{% translate "Price" %}: {{ product.price }}</p>
+                {% translate "No discount" as no_discount %}
+                <p>{% translate "Discount" %}: {% firstof product.discount no_discount %}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>
+            {% blocktranslate %}
+                No products here
+            {% endblocktranslate %}
+        </h3>  
+    {% endif %}
+
+
+    {% if perms.shopapp.add_product %}
+        <div>
+            <a href="{% url 'shopapp:create_product' %}">
+                {% translate "Create a new product" %}
+            </a>
+        </div>
+    {% endif %}
+{% endblock body %}
+

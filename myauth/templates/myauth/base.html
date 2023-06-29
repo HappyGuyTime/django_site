@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            margin-right: auto;
+            margin-left: auto;
+            padding: 20px;
+            max-width: 400px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #000;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+        }
+
+        .input {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            min-height: 30px;
+            border: 1px solid #FF5C00;
+            border-radius: 10px;
+        }
+
+        .text-area {
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+            min-height: 100px;
+            border: 1px solid #FF5C00;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #FF5C00;
+        }
+
+        .error {
+            margin-bottom: 5px;
+            color: red;
+        }
+    </style>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% block body %}{% endblock body %}
+
+    <h2>
+        HTTP User-Agent {{ request.user_agent }}
+    </h2>
+</body>
+</html>

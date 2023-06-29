@@ -1,0 +1,80 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$ORxGbpZuRtgN982K9bXns8$FMh1+k2btRndByMVip+nYfjAaC6FfuJBnYGzYhS4p3s=",
+            "last_login": "2023-03-06T11:44:21.086Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "Happy",
+            "last_name": "Guy",
+            "email": "1210044@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-01-29T07:26:26Z",
+            "groups": [
+                3
+            ],
+            "user_permissions": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$McjJwxP0qV92IvMsSwStIw$xqbcFFdppcLRr1Q+eddDyIEo8FzlLKKEFOwqPGL47ek=",
+            "last_login": "2023-03-06T12:16:03.080Z",
+            "is_superuser": false,
+            "username": "Aza",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-02-11T10:53:47Z",
+            "groups": [
+                4
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$390000$TwI86FBQhy8sCr6F9bc4Uu$1LQcy2O6NIhXoes1tVjvwv4Sbic9HY+xRJgno0ABj5E=",
+            "last_login": "2023-03-08T08:20:31.869Z",
+            "is_superuser": false,
+            "username": "John",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-02-13T14:20:12.632Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "password": "",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "",
+            "first_name": "Azamat",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-02-21T12:07:45.952Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

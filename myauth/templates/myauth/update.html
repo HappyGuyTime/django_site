@@ -1,0 +1,15 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}Change Profile{% endblock %}
+
+{% block body %}
+    <h1>Change Profile</h1>
+    <form method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type='submit'>Change</button>
+    </form>
+    <div>
+        <a href="{% url 'myauth:profile' pk=profile.pk %}">Go to Profile</a>
+    </div>
+{% endblock body %}
