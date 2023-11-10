@@ -38,9 +38,29 @@ To run the project locally, follow these steps:
     ```bash
     python manage.py create_data
 
-7. Start the development server.
+7. To install the frontend application, go to the diploma-frontend directory and follow the documentation.
+
+8. Start the development server.
 
     ```bash
-python manage.py runserver
+    python manage.py runserver
 
-8. Open your web browser and navigate to http://localhost:8000/ to access the project.
+9. Open your web browser and navigate to http://localhost:8000/ to access the project.
+
+## Dependencies
+MEGANO project uses the following dependencies:
+
+- Django
+- Django REST framework
+- Pillow
+- Django-filter
+
+You can find the specific versions in the requirements.txt file.
+
+## Project Structure
+The project follows the standard Django project structure. The main components include:
+
+- products: Contains models, views, and serializers for products and categories.
+- profiles: Manages user profiles and authentication.
+- orders: Handles order creation, processing, and payment.
+- frontend: The frontend application for MEGANO.
