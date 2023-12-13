@@ -44,6 +44,7 @@ class RegisterView(CreateView):
 
     def form_valid(self, form) -> HttpResponse:
         response = super().form_valid(form)
+        print('sdad')
         Profile.objects.create(user=self.object)
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password1')

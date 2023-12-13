@@ -19,8 +19,8 @@ class Article(models.Model):
     title = models.CharField(max_length=200, db_index=True)
     content = models.TextField(null=False, blank=True, db_index=True)
     pub_date = models.DateTimeField(null=True, blank=True)
-    author = models.ForeignKey(Author, default=Author.objects.first().pk, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, default=Category.objects.first().pk, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='article')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='article')
     tags = models.ManyToManyField(Tag)
 
     def get_absolute_url(self):
